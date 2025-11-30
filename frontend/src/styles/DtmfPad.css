@@ -1,0 +1,53 @@
+.dtmf-pad {
+  margin: 20px 0;
+}
+
+.dtmf-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dtmf-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.dtmf-button {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: 2px solid var(--border-color);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.dtmf-button:hover:not(:disabled) {
+  background-color: #e1dfdd;
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.dtmf-button:active:not(:disabled) {
+  transform: scale(0.95);
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.dtmf-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .dtmf-button {
+    width: 64px;
+    height: 64px;
+    font-size: 24px;
+  }
+}
